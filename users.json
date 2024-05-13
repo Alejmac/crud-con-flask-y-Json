@@ -1,8 +1,8 @@
 [
     {
         "nombre": "John",
-        "apellido1": "Doe",
-        "apellido2": "",
+        "apellido1": "ramirez",
+        "apellido2": "smith",
         "cargo": "Developer",
         "empresa": "ABC Inc.",
         "calle": "123 Main St",
@@ -11,7 +11,7 @@
         "colonia": "Downtown",
         "municipio": "City",
         "estado": "State",
-        "codigoPostal": "12345",
+        "codigoPostal": "",
         "telefono": "555-1234",
         "email": "john@example.com",
         "fechaNac": "2000-01-01"
