@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, send_file,abort
-from users import añadir_usuario, obtener_usuarios
+from users import añadir_usuario, obtener_usuarios ,editar_usuario
 
 app = Flask(__name__)
 
@@ -12,10 +12,30 @@ def mostrar_usuarios():
     usuarios = obtener_usuarios()
     return render_template('users.html', usuarios=usuarios)
 
-@app.route('/edtuser')
+@app.route('/edtuser', methods=['GET', 'POST'])
 def edtuser():
-    usuarios = obtener_usuarios()
-    return render_template('edtuser.html',usuarios=usuarios, active="usuarios")
+    if request.method == 'POST':
+        # Recupera los datos del formulario
+        nombre = request.form['nombre']
+        apellido1 = request.form.get('apellido1')
+        apellido2 = request.form.get('apellido2')
+        cargo = request.form.get('cargo')
+        empresa = request.form.get('empresa')
+        calle = request.form.get('calle')
+        numeroExt = request.form.get('numeroExt')
+        numeroInt = request.form.get('numeroInt')
+        colonia = request.form.get('colonia')
+        municipio = request.form.get('municipio')
+        estado = request.form.get('estado')
+        codigoPostal = request.form.get('codigopostal')
+        telefono = request.form.get('telefono')
+        email = request.form.get('email')
+        fechaNac = request.form.get('fechanac')
+        editar_usuario(nombre,apellido1,apellido2,cargo,empresa,calle,numeroExt,numeroInt,colonia,municipio,estado,codigoPostal,telefono,email,fechaNac)
+        return redirect(url_for('index'))
+    else:
+        usuarios = obtener_usuarios()
+        return render_template('edtuser.html',usuarios=usuarios, active="usuarios")
 
 @app.route('/adduser')
 def adduser():

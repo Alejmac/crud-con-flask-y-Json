@@ -7,6 +7,30 @@
 <div class="card mb-4">
     <div class="card-body">
         <h5 class="card-title">{{ usuario.nombre }} {{ usuario.apellido1 }} {{ usuario.apellido2 }}</h5>
+        <form method="POST" action="{{ url_for('edtuser') }}">
+            <input type="text" name="nombre" value="{{ usuario.nombre }}">
+            <input type="text" name="apellido1" value="{{ usuario.apellido1 }}">
+            <input type="text" name="apellido2" value="{{ usuario.apellido2 }}">
+            <input type="text" name="cargo" value="{{ usuario.cargo }}">
+            <input type="text" name="empresa" value="{{ usuario.empresa }}">
+            <input type="text" name="calle" value="{{ usuario.calle }}">
+            <input type="text" name="numeroExt" value="{{ usuario.numeroExt }}">
+            <input type="text" name="numeroInt" value="{{ usuario.numeroInt }}">
+            <input type="text" name="colonia" value="{{ usuario.colonia }}">
+            <input type="text" name="municipio" value="{{ usuario.municipio }}">
+            <input type="text" name="estado" value="{{ usuario.estado }}">
+            <input type="text" name="codigopostal" value="{{ usuario.codigopostal }}">
+            <input type="text" name="telefono" value="{{ usuario.telefono }}">
+            <input type="email" name="email" value="{{ usuario.email }}">
+            <input type="date" name="fechanacimiento" value="{{ usuario.fechanacimiento }}">
+            
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary mt-3">
+                    <img  alt="Editar" /> Editar
+                </button>
+            </div>
+        </form>
+        <hr>
         <table class="table">
             <tbody>
                 <tr>
@@ -69,12 +93,9 @@
                     <th>Fecha de nacimiento</th>
                     <td>{{ usuario.fechanacimiento }}</td>
                 </tr>
-                
+
             </tbody>
         </table>
-        <a href="#" class="btn btn-primary">
-            <img src="edit-icon.png" alt="Editar" /> Editar
-        </a>
         <a href="#" class="btn btn-danger">
             <img src="delete-icon.png" alt="Borrar" /> Borrar
         </a>
