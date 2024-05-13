@@ -44,5 +44,27 @@ def añadir_usuario(nombre, apellido1, apellido2, cargo, empresa, calle, numeroE
         with open('users.json', 'w') as file:
             json.dump(usuarios_exist, file, indent=4)
 
+# # Ejemplo de uso:
+# añadir_usuario("John", "Doe", "", "Developer", "ABC Inc.", "123 Main St", "1", "", "Downtown", "City", "State", "12345", "555-1234", "john@example.com", "2000-01-01")
+
+# # Verificar que el usuario fue añadido correctamente 
+
+def obtener_usuarios():
+    # Verificar si el archivo JSON existe
+    if not os.path.exists('users.json'):
+        return []  # Si el archivo no existe, retornar una lista vacía
+
+    # Abrir el archivo JSON y cargar su contenido actual
+    with open('users.json', 'r') as file:
+        usuarios_exist = json.load(file)
+
+    return usuarios_exist
+
 # Ejemplo de uso:
-añadir_usuario("John", "Doe", "", "Developer", "ABC Inc.", "123 Main St", "1", "", "Downtown", "City", "State", "12345", "555-1234", "john@example.com", "2000-01-01")
+# usuarios = obtener_usuarios()
+# print(usuarios) 
+
+# with open('users.json', 'r') as file:
+#     usuarios = json.load(file)
+#     for usuario in usuarios:
+#         print(usuario)

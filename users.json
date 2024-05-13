@@ -32,5 +32,22 @@
         "telefono": "555-1234",
         "email": "john@example.com",
         "fechaNac": "2000-01-01"
+    },
+    {
+        "nombre": "jorge",
+        "apellido1": "macias",
+        "apellido2": "perez",
+        "cargo": " develop",
+        "empresa": "ceti",
+        "calle": "nueva esc.",
+        "numeroExt": "123",
+        "numeroInt": "0",
+        "colonia": "providencia",
+        "municipio": "guadalajara",
+        "estado": "jalisco",
+        "codigoPostal": "44750",
+        "telefono": "3313237128",
+        "email": "a21110186@live.ceti.mx",
+        "fechaNac": "2000-08-16"
     }
 ]

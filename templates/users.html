@@ -1,5 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<h1>Lista de Usuarios</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Cargo</th>
+            <th>Empresa</th>
+            <th>Calle</th>
+            <th>Numero Exterior</th>
+            <th>Numero Interior</th>
+            <th>Colonia</th>
+            <th>Municipio</th>
+            <th>Estado</th>
+            <th>Código Postal</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Fecha de nacimiento</th>
+            <!-- <th>Edad</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.apellido1 }}</td>
+            <td>{{ usuario.apellido2 }}</td>
+            <td>{{ usuario.cargo }}</td>
+            <td>{{ usuario.empresa }}</td>
+            <td>{{ usuario.calle }}</td>
+            <td>{{ usuario.numeroExt }}</td>
+            <td>{{ usuario.numeroInt }}</td>
+            <td>{{ usuario.colonia }}</td>
+            <td>{{ usuario.municipio }}</td>
+            <td>{{ usuario.estado }}</td>
+            <td>{{ usuario.codigopostal }}</td>
+            <td>{{ usuario.telefono }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.fechanacimiento }}</td>
+            <!-- <td>{{ usuario.edad }}</td> -->
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
