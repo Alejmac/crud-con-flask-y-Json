@@ -1,0 +1,36 @@
+[
+    {
+        "nombre": "John",
+        "apellido1": "Doe",
+        "apellido2": "",
+        "cargo": "Developer",
+        "empresa": "ABC Inc.",
+        "calle": "123 Main St",
+        "numeroExt": "1",
+        "numeroInt": "",
+        "colonia": "Downtown",
+        "municipio": "City",
+        "estado": "State",
+        "codigoPostal": "12345",
+        "telefono": "555-1234",
+        "email": "john@example.com",
+        "fechaNac": "2000-01-01"
+    },
+    {
+        "nombre": "John",
+        "apellido1": "Doe",
+        "apellido2": "",
+        "cargo": "Developer",
+        "empresa": "ABC Inc.",
+        "calle": "123 Main St",
+        "numeroExt": "1",
+        "numeroInt": "",
+        "colonia": "Downtown",
+        "municipio": "City",
+        "estado": "State",
+        "codigoPostal": "12345",
+        "telefono": "555-1234",
+        "email": "john@example.com",
+        "fechaNac": "2000-01-01"
+    }
+]

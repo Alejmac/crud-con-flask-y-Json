@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form action="/insertar_usuario" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="nombre">Nombres</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Escribe tus nombres">
+            </div>
+            <div class="col-md-6">
+                <label for="apellido1">Apellido Paterno</label>
+                <input type="text" name="apellido1" id="apellido1" class="form-control" placeholder="Escribe tu apellido paterno">
+            </div>
+            <div class="col-md-6">
+                <label for="apellido2">Apellido Materno</label>
+                <input type="text" name="apellido2" id="apellido2" class="form-control" placeholder="Escribe tu apellido materno">
+            </div>
+            <div class="col-md-6">
+                <label for="cargo">Cargo</label>
+                <input type="text" name="cargo" id="cargo" class="form-control" placeholder="Escribe tu cargo">
+            </div>
+            <div class="col-md-6">
+                <label for="empresa">Empresa</label>
+                <input type="text" name="empresa" id="empresa" class="form-control" placeholder="Escribe tu empresa">
+            </div>
+            <div class="col-md-6">
+                <label for="calle">Calle</label>
+                <input type="text" name="calle" id="calle" class="form-control" placeholder="Escribe tu calle">
+            </div>
+            <div class="col-md-6">
+                <label for="numeroExt">Número Ext.</label>
+                <input type="text" name="numeroExt" id="numeroExt" class="form-control" placeholder="Escribe tu número exterior">
+            </div>
+            <div class="col-md-6">
+                <label for="numeroInt">Número Int.</label>
+                <input type="text" name="numeroInt" id="numeroInt" class="form-control" placeholder="Escribe tu número interior (opcional)">
+            </div>
+            <div class="col-md-6">
+                <label for="colonia">Colonia</label>
+                <input type="text" name="colonia" id="colonia" class="form-control" placeholder="Escribe tu colonia">
+            </div>
+            <div class="col-md-6">
+                <label for="municipio">Municipio</label>
+                <input type="text" name="municipio" id="municipio" class="form-control" placeholder="Escribe tu municipio">
+            </div>
+            <div class="col-md-6">
+                <label for="estado">Estado</label>
+                <input type="text" name="estado" id="estado" class="form-control" placeholder="Escribe tu estado">
+            </div>
+            <div class="col-md-6">
+                <label for="codigopostal">Código Postal</label>
+                <input type="text" name="codigopostal" id="codigopostal" class="form-control" placeholder="Escribe tu código postal">
+            </div>
+            <div class="col-md-6">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Escribe tu número de teléfono">
+            </div>
+            <div class="col-md-6">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Escribe tu dirección de correo electrónico">
+            </div>
+            <div class="col-md-6">
+                <label for="fechanac">Fecha de Nacimiento</label>
+                <input type="date" name="fechanac" id="fechanac" class="form-control" placeholder="Escribe tu fecha de nacimiento">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+</div>
+{% endblock %}
