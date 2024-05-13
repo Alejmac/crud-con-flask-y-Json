@@ -12,9 +12,15 @@ def mostrar_usuarios():
     usuarios = obtener_usuarios()
     return render_template('users.html', usuarios=usuarios)
 
+@app.route('/edtuser')
+def edtuser():
+    usuarios = obtener_usuarios()
+    return render_template('edtuser.html',usuarios=usuarios, active="usuarios")
+
 @app.route('/adduser')
 def adduser():
     return render_template('adduser.html',titulo="Proyecto IOT",active="usuarios")
+
 
 @app.route('/insertar_usuario', methods=['POST'])
 def insert_user():
@@ -38,8 +44,8 @@ def insert_user():
         añadir_usuario(nombre,apellido1,apellido2,cargo,empresa,calle,numeroExt,numeroInt,colonia,municipio,estado,codigoPostal,telefono,email,fechaNac)
     return redirect(url_for('index'))
 
-@app.route('/edit_user', methods=['POST'])
-def edit_user():
+#@app.route('/edit_user', methods=['POST'])
+#def edit_user():
     # Recibir el usuario que vas a editar
 
 if __name__ == '__main__':
