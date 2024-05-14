@@ -49,7 +49,8 @@
 </table>
 
 <div class="d-flex justify-content-center">
-    <a href="edtuser" class="btn btn-primary">Editar Usuarios</a>
+    <a href="{{ url_for('edtuser') }}" class="btn btn-danger" style="margin-right: 20px;">Editar Usuarios</a>
+    <a href="{{ url_for('adduser') }}" class="btn btn-primary">Agregar Usuario</a>
 </div>
 
 {% endblock %}

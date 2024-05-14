@@ -1,7 +1,7 @@
 [
     {
         "nombre": "John",
-        "apellido1": "ramirez",
+        "apellido1": "a",
         "apellido2": "smith",
         "cargo": "Developer",
         "empresa": "ABC Inc.",
@@ -12,7 +12,7 @@
         "municipio": "City",
         "estado": "State",
         "codigoPostal": "",
-        "telefono": "555-1234",
+        "telefono": "331444122",
         "email": "john@example.com",
         "fechaNac": "2000-01-01"
     },
