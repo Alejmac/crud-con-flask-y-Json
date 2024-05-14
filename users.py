@@ -107,3 +107,4 @@ def editar_usuario(nombre, apellido1=None, apellido2=None, cargo=None, empresa=N
     # Escribir el contenido actualizado de vuelta al archivo JSON
     with open('users.json', 'w') as file:
         json.dump(usuarios_exist, file, indent=4)
+

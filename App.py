@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, send_file,abort
-from users import añadir_usuario, obtener_usuarios ,editar_usuario
-
+from users import añadir_usuario, obtener_usuarios ,editar_usuario 
+import json
 app = Flask(__name__)
 
 @app.route('/')
@@ -63,10 +63,6 @@ def insert_user():
         fechaNac = request.form['fechanac']
         añadir_usuario(nombre,apellido1,apellido2,cargo,empresa,calle,numeroExt,numeroInt,colonia,municipio,estado,codigoPostal,telefono,email,fechaNac)
     return redirect(url_for('index'))
-
-#@app.route('/edit_user', methods=['POST'])
-#def edit_user():
-    # Recibir el usuario que vas a editar
 
 if __name__ == '__main__':
     app.run(debug=True,host="0.0.0.0",port=80)
